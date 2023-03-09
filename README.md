@@ -33,7 +33,7 @@ The Problem class contains the definitions of optimization problems as subclasse
 1. To add a new problem, define a new subclass under the Problem class
 2. Problem parameters can be predefined as class variables or defined at runtime as instance variables
   - Include variables that describe the optimization goal, input dimensions, and input domain (upper/lower boundaries)
-3. Each problem subclass must have a function called `Objective_Function` defines and returns how input data is evaluated.
+3. Each problem subclass must have a function called `objective_function` defines and returns how input data is evaluated.
   - The input should should match expected problem parameters such as input dimensions and boundaries. 
 
 ```Python3
@@ -52,7 +52,7 @@ class Problem():
     def __init__(self, lower_bounds):
       self.lower_bounds = lower_bounds
     
-    def Objective_Function(X):
+    def objective_function(X):
       result = X[0] + X[1]
       return result
   
